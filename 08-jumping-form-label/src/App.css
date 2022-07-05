@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+.App {
+    @apply flex justify-center items-center;
+}
+
+.form-control {
+    @apply relative border-b-2 border-[#fff] mb-6;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+
+input {
+    @apply w-full bg-transparent;
+}
+
+.form-control input {
+    /* background-color: transparent; */
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+.form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus,
+.form-control input:valid {
+    outline: 0;
+    border-bottom-color: lightblue;
+}
+
+.form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+.form-control input:focus+label span {
+    color: lightblue;
+    transform: translateY(-30px);
+}
+
+
+/* .form-control input:valid+label span {
+    color: lightblue;
+    transform: translateY(-30px);
+} */
+
+.filled+label span {
+    color: lightblue;
+    transform: translateY(-30px);
+}
